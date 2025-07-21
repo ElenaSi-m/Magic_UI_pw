@@ -1,6 +1,7 @@
 from pages.customer_login import CustomerLogin
+import pytest
 
-
+@pytest.mark.smoke
 def test_incorrect_email(page):
     login_page = CustomerLogin(page)
     login_page.open_page()
@@ -11,7 +12,7 @@ def test_incorrect_email(page):
         "Please enter a valid email address (Ex: johndoe@domain.com)."
     )
 
-
+@pytest.mark.regression
 def test_incorrect_password(page):
     login_page = CustomerLogin(page)
     login_page.open_page()
@@ -22,7 +23,7 @@ def test_incorrect_password(page):
         "Please enter the same value again."
     )
 
-
+@pytest.mark.extended
 def test_weak_password(page):
     login_page = CustomerLogin(page)
     login_page.open_page()
