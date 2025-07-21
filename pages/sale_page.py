@@ -9,7 +9,7 @@ class Sale(BasePage):
     def check_page_header_title_is(self, text):
         header_title = self.find("h1.page-title")
         header_text = header_title.inner_text()
-        assert header_text == text, f"Expected header '{text}', but got '{header_title.text}'"
+        assert header_text == text, f"Expected header '{text}', but got '{header_text}'"
 
     def click_mens_bargains(self):
         mens_bargains = self.page.locator(
