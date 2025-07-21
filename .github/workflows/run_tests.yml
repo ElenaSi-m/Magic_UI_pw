@@ -23,7 +23,3 @@ jobs:
                 
       - name: run tests
         run: pytest
-
-        
-      
-       
