@@ -8,12 +8,15 @@ jobs:
     steps:
       - name: Checkout autotests
         uses: actions/checkout@v4
+        
       - name: Set up Python environment
         uses: actions/setup-python@v5
-          with:
+        with:
           python-version: '3.13'
+          
       - name: Install dependecies
         run: pip install -r requirements.txt
+        
       - name: run tests
         run: pytest
       
