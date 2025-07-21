@@ -1,10 +1,10 @@
 name: Python autotests
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
     inputs:
       deployment_target:
-        description: choose tests set
+        description: Choose tests set
         required: true
         type: choice
         default: smoke
