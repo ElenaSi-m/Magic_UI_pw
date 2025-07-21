@@ -7,7 +7,7 @@ class Sale(BasePage):
     page_url = "sale.html"
 
     def check_page_header_title_is(self, text):
-        header_title = self.find("h1")
+        header_title = self.find("h1.page-title")
         header_text = header_title.inner_text()
         assert header_text == text, f"Expected header '{text}', but got '{header_title.text}'"
 
